@@ -32,7 +32,5 @@ void stop_buzzer(){
 
 void test_buzzer(){
     set_buzzer(440);
-    delay_msi(1);
-    set_buzzer(0);
 }
 

@@ -2,12 +2,18 @@
 #include "led.h"
 #include "switches.h"
 
+// prototype to assemble the machines
+extern void update();
+
 void init_leds(){
   P1DIR |= LEDS;		// bits attached to leds are output
   P1OUT = 0;            // Ensure LEDs are off
 }
 
 void update_leds(){      // State Machine
+	// call to assembly the machines
+	update();
+/*
     switch(P1OUT){      // Current state is encoded in P1OUT
     case LED_RED:       // Current state is red
         set_red(0);
@@ -20,6 +26,7 @@ void update_leds(){      // State Machine
     default:            // Current state is off
         set_green(1);
     }
+*/
 }
 
 void set_red(char state){

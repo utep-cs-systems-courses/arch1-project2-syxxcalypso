@@ -2,7 +2,7 @@
 #include "switches.h"
 #include "led.h"
 #include "sound.h"
-#include "delay.h"
+
 
 void __interrupt_vec(PORT2_VECTOR) switch_isr(){
   if (P2IFG & SWITCHES) {         // did a button cause this interrupt?

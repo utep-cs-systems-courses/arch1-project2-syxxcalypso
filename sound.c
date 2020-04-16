@@ -3,7 +3,6 @@
 #include "sound.h"
 #include "libTimer.h"
 #include "clocksTimer.h"
-#include "delay.h"
 
 void init_buzzer(){                    // Sourced from demo
    /*

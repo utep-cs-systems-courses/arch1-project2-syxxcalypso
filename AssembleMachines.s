@@ -3,13 +3,13 @@
 
 
 	.text
-	.global update_leds	;; visible to other object files
+	.global update	;; visible to other object files
 JT:
 	.word default
 	.word case1
 	.word case2
 
-update_leds:	
+update:	
 	mov.b &0x0021, r12		;; move s into r12
 	cmp #3, r1		;; if state > 3, !borrow 
 	jnc default

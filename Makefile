@@ -11,7 +11,7 @@ AR              = msp430-elf-ar
 all: project.elf 
 
 #additional rules for files
-project.elf: ${COMMON_OBJECTS} sound.o led.o switches.o main.o libTimer.a
+project.elf: ${COMMON_OBJECTS} sound.o led.o switches.o main.o libTimer.a AssembleMachines.o
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load: project.elf
